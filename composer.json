@@ -19,7 +19,9 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.52"
+        "friendsofphp/php-cs-fixer": "^3.48",
+        "symfony/maker-bundle": "^1.52",
+        "trusted97/whitecat": "^1.0"
     },
     "config": {
         "allow-plugins": {
@@ -49,6 +51,8 @@
         "symfony/polyfill-php81": "*"
     },
     "scripts": {
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix --verbose",
+        "php-cs-fixer-dry-run": "vendor/bin/php-cs-fixer fix --verbose --diff --dry-run",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
